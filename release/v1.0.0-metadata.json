@@ -1,0 +1,40 @@
+{
+  "format": "bitrackswin-seg-weights-only",
+  "format_version": 1,
+  "release_version": "v1.0.0",
+  "source_checkpoint_key": "model_state_dict",
+  "weight_variant": "raw",
+  "epoch": 95,
+  "best_miou": 0.8759134275714613,
+  "architecture_config": {
+    "epochs": 100,
+    "batch_size": 2,
+    "lr": 0.0005,
+    "architecture_mode": "three_stage",
+    "fpn_dim": 256,
+    "pixel_decoder_type": "unet"
+  },
+  "tensor_count": 369,
+  "trainable_parameter_count": 13441205,
+  "state_element_count": 13441277,
+  "state_dict_sha256": "39183eff1a24b62729c370f441c0cea1fcae1436ea5865a5656a9b204d2300e4",
+  "artifact_filename": "bitrackswin_seg_v1_raw.pth",
+  "artifact_bytes": 53887062,
+  "artifact_sha256": "2067e038d9fc177d43605d7087463bafa297aadef091b5a6384b1ccf4a60a4b1",
+  "source_checkpoint": "best.pth",
+  "source_checkpoint_bytes": 215331150,
+  "source_checkpoint_contains": [
+    "best_miou",
+    "config",
+    "ema_state_dict",
+    "epoch",
+    "model_state_dict",
+    "optimizer_state_dict",
+    "rng_state",
+    "scaler_state_dict",
+    "scheduler_state_dict"
+  ],
+  "ema_tensor_count": 369,
+  "raw_tensors_differing_from_ema": 353,
+  "verification": "Reloaded with torch.load(weights_only=True) and matched RAW state-dict SHA256."
+}

@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  model-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      - name: Install minimal test dependencies
+        run: python -m pip install "torch>=2.4,<2.11" "numpy>=1.24,<2.3" "PyYAML>=6,<7"
+      - name: Compile sources
+        run: python -m compileall -q models datasets engine tools scripts tests
+      - name: Validate the model contract
+        run: python -m unittest discover -s tests -v
+      - name: Build the model from the public config
+        run: python tools/train.py --config configs/bitrackswin_seg_v1.yaml --dry-run --device cpu

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use BiTrackSwin-Seg, please cite this software record."
+title: "BiTrackSwin-Seg: five-band single-stream segmentation"
+version: "1.0.0"
+type: software
+authors:
+  - name: "BiTrackSwin-Seg Contributors"
+abstract: "A five-band, single-stream remote-sensing semantic-segmentation implementation with a BiLevel cross-window encoder and U-Net decoder."
+keywords:
+  - semantic segmentation
+  - remote sensing
+  - Swin Transformer
+  - five-band imagery

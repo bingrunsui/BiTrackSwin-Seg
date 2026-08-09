@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and editor state
+.venv/
+venv/
+env/
+.env
+.vscode/
+.idea/
+
+# Data and experiment outputs: never commit private/source data or training artifacts.
+data/
+outputs/
+outputs_simple/
+runs/
+tensorboard/
+predictions/
+checkpoints/
+*.tfevents.*
+*.log
+
+# Weights belong in GitHub Releases, not Git history.
+weights/*.pth
+weights/*.pt
+weights/*.ckpt
+*.onnx
+
+# Common geospatial/raster sidecars and archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.npy
+*.npz
+
+# OS files
+.DS_Store
+Thumbs.db

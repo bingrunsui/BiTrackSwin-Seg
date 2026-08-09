@@ -1,0 +1,9 @@
+# Install PyTorch for the CUDA runtime on the target DL machine first when needed:
+# https://pytorch.org/get-started/locally/
+# The v1 code uses torch.amp and scaled-dot-product attention; PyTorch 2.4+ is required.
+# Do not use this line to select a CUDA build: install the build matching the DL machine first.
+torch>=2.4,<2.11
+numpy>=1.24,<2.3
+rasterio>=1.3,<1.5
+Pillow>=10.0,<12.0
+PyYAML>=6.0,<7.0
