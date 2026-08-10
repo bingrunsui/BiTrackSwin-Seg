@@ -1,5 +1,7 @@
 # BiTrackSwin-Seg
 
+**English** | [简体中文](README_zh-CN.md)
+
 BiTrackSwin-Seg v1 is a five-band, single-stream semantic-segmentation model for remote-sensing imagery. It combines a convolutional stem, a three-stage SwinV2-style encoder with a stage-1 BiLevel cross-window block, and a U-Net decoder.
 
 > **Scope of v1.** The released reference model consumes one tensor of shape `[B, 5, H, W]`. It is **not** a two-stream or multimodal checkpoint. The name `multimodal` in the original experiment directory is historical only.
